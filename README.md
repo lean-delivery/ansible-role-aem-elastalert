@@ -34,6 +34,7 @@ Requirements
 - Minimal Version of the ansible for installation: 2.9
 - AEM node version 7.5 with jolokia agent https://github.com/lean-delivery/ansible-role-aem-node
 - Minimal Version of the Elastic stack: 7.5
+- SNS alerting can work only with configured aws profile on instance where elastalert works
 - Metricbeat https://github.com/lean-delivery/ansible-role-metricbeat
  - **Supported OS**:
    - CentOS
