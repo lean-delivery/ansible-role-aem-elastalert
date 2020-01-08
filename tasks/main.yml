@@ -1,13 +1,13 @@
 ---
+- name: Installing filebeat on current OS
+  include_tasks: '{{ distrib_tasks }}'
+  with_first_found:
+    - '{{ ansible_os_family }}.yml'
+    - not-supported.yml
+  loop_control:
+    loop_var: distrib_tasks
+
 - block:
-
-    - name: Install dependencies
-      package:
-        name: 
-          - python3-pip
-          - git
-        state: present
-
     - name: Git checkout from elastalert repo
       git:
         repo: '{{ elastalert_repo }}'
@@ -63,5 +63,4 @@
         name: elastalert
         state: started
         daemon-reload: yes
-
   become: true
