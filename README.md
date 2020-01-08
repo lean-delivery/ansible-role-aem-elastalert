@@ -23,7 +23,7 @@ Role tasks
 
 - Prepare server (add elastic repo)
 - [Optional] Create folder(s) for custom paths
-- Install filebeat
+- Install elastalert
 - Copy configuration file
 
 
