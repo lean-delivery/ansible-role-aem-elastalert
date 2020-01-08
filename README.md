@@ -11,7 +11,7 @@ AEM Elastalert role
 
 
 This role:
-  - installs elastalert on Ubuntu, CentOS
+  - install elastalert on Ubuntu, CentOS
   - copies prepared configuration file (log path, connect to elasticsearch etc.)
 
 
@@ -34,7 +34,7 @@ Requirements
 - Minimal Version of the ansible for installation: 2.9
 - AEM node version 7.5 with jolokia agent https://github.com/lean-delivery/ansible-role-aem-node
 - Minimal Version of the Elastic stack: 7.5
-- Metricbeat https://github.com/MaxKavun/ansible-role-metricbeats
+- Metricbeat https://github.com/lean-delivery/ansible-role-metricbeat
  - **Supported OS**:
    - CentOS
      - 7,8
@@ -61,6 +61,9 @@ Time how often ElastAlert will query Elasticsearch. By default 5 minutes
 size of the query window, stretching backwards from the time each query is run. By default 5 minutes
 - `writeback_index`
 Index where all rules will be stored
+- `rules_config`
+Custom rule that can will be placed into rules folder. Below you can see examples
+
 
 
 ## Advanced config parameters:
