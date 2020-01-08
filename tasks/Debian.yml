@@ -1,9 +1,10 @@
 ---
 - block:
     - name: Install dependencies
-      package:
+      apt:
         name: python3-pip
         state: present
+        update_cache: yes
 
     - name: Install elastalert
       pip:
