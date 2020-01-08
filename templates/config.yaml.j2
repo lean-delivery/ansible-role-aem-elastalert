@@ -1,0 +1,8 @@
+es_host: {{ es_host }}
+es_port: {{ es_port }}
+run_every: 
+  {{ run_every | to_nice_yaml }}
+buffer_time: 
+  {{ buffer_time | to_nice_yaml }}
+writeback_index: {{ writeback_index }}
+rules_folder: {{ rules_folder }}

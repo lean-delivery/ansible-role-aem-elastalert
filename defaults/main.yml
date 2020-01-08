@@ -1,0 +1,18 @@
+---
+main_folder: /opt/elastalert
+rules_folder: /opt/elastalert/rules
+temp_folder: /tmp/elastalert
+elastalert_repo: https://github.com/Yelp/elastalert.git
+
+run_every: 
+  minutes: 5
+
+
+buffer_time: 
+  minutes: 5
+
+
+writeback_index: elastalert
+
+es_host: localhost
+es_port: 9200
