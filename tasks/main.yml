@@ -1,5 +1,17 @@
 ---
 - block:
+
+    - name: Git checkout from elastalert repo
+      git:
+        repo: '{{ elastalert_repo }}'
+        dest: '{{ temp_folder }}'
+        version: master
+
+    - name: Install requirements for python
+      pip:
+        requirements: '{{ temp_folder }}/requirements.txt'
+        executable: pip3
+
     - name: Install dependencies
       package:
         name: python3-pip
@@ -18,17 +30,6 @@
       with_items:
         - '{{ rules_folder }}'
         - '{{ main_folder }}'
-
-    - name: Git checkout from elastalert repo
-      git:
-        repo: '{{ elastalert_repo }}'
-        dest: '{{ temp_folder }}'
-        version: master
-
-    - name: Install requirements for python
-      pip:
-        requirements: '{{ temp_folder }}/requirements.txt'
-        executable: pip3
 
     - name: Place config file with settings
       template:
