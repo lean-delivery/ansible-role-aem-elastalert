@@ -11,6 +11,7 @@ AEM Elastalert role
 
 
 This role:
+  - Free alerting for Elasticsearch, based on metrics
   - install elastalert on Ubuntu, CentOS
   - copies prepared configuration file (log path, connect to elasticsearch etc.)
 
@@ -56,8 +57,10 @@ You can override any variable below by setting "variable: value" in playbook.
 Elasticsearch host address. By default localhost
 - `es_port`
 Elasticsearch port. By default 9200
-- `run_every`
-Time how often ElastAlert will query Elasticsearch. By default 5 minutes
+- `es_username`
+Optional; basic-auth username for connecting to es_host.
+- `es_password`
+Optional; basic-auth password for connecting to es_host.
 - `buffer_time`
 size of the query window, stretching backwards from the time each query is run. By default 5 minutes
 - `writeback_index`
