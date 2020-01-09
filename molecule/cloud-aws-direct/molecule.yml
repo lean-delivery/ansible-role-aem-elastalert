@@ -10,7 +10,7 @@ lint:
   options:
     config-file: .yamllint
 platforms:
-  - name: test-aws-centos7-filebeat
+  - name: test-aws-centos7-elastalert
     image: ami-9887c6e7
     platform: centos7
     instance_type: m5.large
@@ -25,7 +25,7 @@ platforms:
     groups:
       - rhel_family
 
-  - name: test-aws-centos6-filebeat
+  - name: test-aws-centos6-elastalert
     image: ami-1585c46a
     platform: centos6
     instance_type: m4.large
@@ -40,7 +40,7 @@ platforms:
     groups:
      - rhel_family
 
-  - name: test-aws-ubuntu16-filebeat
+  - name: test-aws-ubuntu16-elastalert
     image: ami-09677e0a6b14905b0
     platform: ubuntu16
     instance_type: m5.large
@@ -55,7 +55,7 @@ platforms:
     groups:
       - debian_family
 
-  - name: test-aws-ubuntu18-filebeat
+  - name: test-aws-ubuntu18-elastalert
     image: ami-012fd5eb46f56731f
     platform: ubuntu18
     instance_type: m5.large
@@ -70,7 +70,7 @@ platforms:
     groups:
       - debian_family
 
-  - name: test-aws-Debian9-filebeat
+  - name: test-aws-Debian9-elastalert
     image: ami-003f19e0e687de1cd
     platform: debian9
     instance_type: m5.large
@@ -85,7 +85,7 @@ platforms:
     groups:
       - debian_family
 
-  - name: test-aws-Amazon-filebeat
+  - name: test-aws-Amazon-elastalert
     image: ami-035b3c7efe6d061d5
     platform: amazon
     instance_type: m5.large
@@ -100,7 +100,7 @@ platforms:
     groups:
       - rhel_family
 
-  - name: test-aws-Amazon2-filebeat
+  - name: test-aws-Amazon2-elastalert
     image: ami-0b898040803850657
     platform: amazon2
     instance_type: m5.large
