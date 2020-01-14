@@ -99,7 +99,7 @@ Example Playbook
 - name: Install AEM monitoring
   hosts: all
   roles:
-    - role: ansible-role-aem-monitoring
+    - role: ansible-role-aem-elastalert
   vars:
     es_host: localhost
     es_port: 9200
@@ -116,7 +116,7 @@ Example Playbook
 - name: Install AEM monitoring
   hosts: all
   roles:
-    - role: ansible-role-aem-monitoring
+    - role: ansible-role-aem-elastalert
   vars:
     es_host: localhost
     es_port: 9200
@@ -154,7 +154,7 @@ Example Playbook
 - name: Install AEM monitoring
   hosts: all
   roles:
-    - role: ansible-role-aem-monitoring
+    - role: ansible-role-aem-elastalert
   vars:
     es_host: localhost
     es_port: 9200
