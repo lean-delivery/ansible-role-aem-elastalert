@@ -1,0 +1,18 @@
+---
+# This is an example playbook to execute Ansible tests.
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Gather the package facts
+      package_facts:
+        manager: auto
+
+    - name: Populate service facts
+      service_facts:
+
+    - name: Assert that filebeat service is running
+      assert:
+        that: |
+                "'running' in ansible_facts.services['elastalert.service'].state"
+                or
+                "'running' in ansible_facts.services['elastalert'].state"

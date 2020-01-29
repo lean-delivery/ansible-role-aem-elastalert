@@ -1,0 +1,11 @@
+[Unit]
+Description=Elastalert
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/elastalert --config {{ main_folder }}/config.yaml
+Restart=on-failure
+RestartSec=3
+StartLimitBurst=3
+StartLimitInterval=60
+WorkingDirectory={{ main_folder }}
